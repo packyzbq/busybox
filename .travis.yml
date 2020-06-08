@@ -2,6 +2,6 @@ service:
 - docker
 
 script:
-- docker build . -t packyzbq/prometheus/busybox-linux-mips64le:latest -f uclibc/Dockerfile
+- make build tag
 - docker login -u packyzbq -p $DOCKER_PASSWD
 - docker push packyzbq/prometheus/busybox-linux-mips64le:latest
