@@ -15,7 +15,8 @@ REPOSITORY ?= packyzbq/prometheus
 NAME       := busybox
 BRANCH     := $(shell git rev-parse --abbrev-ref HEAD)
 SUFFIX     ?= -$(subst /,-,$(BRANCH))
-VERSIONS   ?= uclibc glibc
+VERSIONS   ?= uclibc
+ARCH = mips64le/
 
 .PHONY: all
 all: build
