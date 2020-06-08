@@ -1,4 +1,4 @@
-ARG ARCH=""
+ARG ARCH="mips64le/"
 FROM ${ARCH}debian:buster
 
 RUN \
