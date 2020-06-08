@@ -18,5 +18,6 @@ set -e
 source vars.sh
 
 for version in "${versions[@]}"; do
-  docker build --build-arg ARCH="${ARCH}" --pull -t "${IMAGE_NAME}:latest" "${version}"
+  # docker build --build-arg ARCH="${ARCH}" --pull -t "${IMAGE_NAME}:latest" "${version}"
+  docker build --pull -t "${IMAGE_NAME}:latest" "${version}"
 done

@@ -1,5 +1,4 @@
-ARG ARCH="mips64le/"
-FROM ${ARCH}debian:buster
+FROM mips64le/debian:buster
 
 RUN \
     apt-get update && apt-get install -y --no-install-recommends \
@@ -28,7 +27,7 @@ RUN set -x \
         fi; \
     done
 
-FROM        ${ARCH}busybox:uclibc
+FROM        mips64le/busybox:uclibc
 MAINTAINER  The Prometheus Authors <prometheus-developers@googlegroups.com>
 
 COPY --from=0 /rootfs /
